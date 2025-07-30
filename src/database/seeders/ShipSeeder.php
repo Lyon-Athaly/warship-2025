@@ -87,6 +87,51 @@ class ShipSeeder extends Seeder
             'built_year' => 1944,
         ]);
 
+        Ship::create([
+            'name' => 'SS Kirov',
+            'type_id' => Type::where('name', 'Cruiser')->first()->id,
+            'dock_id' => Dock::where('name', 'Kronstadt Naval Base')->first()->id,
+            'nation_id' => Nation::where('name', 'Russia')->first()->id,
+            'hull_number' => 26,
+            'built_year' => 1943,
+        ]);
+        
+        Ship::create([
+            'name' => 'USS New Jersey',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
+            'dock_id' => Dock::where('name', 'Naval Station Norfolk')->first()->id,
+            'nation_id' => Nation::where('name', 'United States')->first()->id,
+            'hull_number' => 62,
+            'built_year' => 1943,
+        ]);
+
+        Ship::create([
+            'name' => 'HMS Vanguard',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
+            'dock_id' => Dock::where('name', 'Portsmouth')->first()->id,
+            'nation_id' => Nation::where('name', 'United Kingdom')->first()->id,
+            'hull_number' => 23,
+            'built_year' => 1946,
+        ]);
+
+        Ship::create([
+            'name' => 'INS Vikrant',
+            'type_id' => Type::where('name', 'Carrier')->first()->id,
+            'dock_id' => Dock::where('name', 'Naval Base San Francisco')->first()->id,
+            'nation_id' => Nation::where('name', 'India')->first()->id,
+            'hull_number' => 1,
+            'built_year' => 1961,
+        ]);
+
+        Ship::create([
+            'name' => 'IJN Yamato',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
+            'dock_id' => Dock::where('name', 'Kure Naval Base')->first()->id,
+            'nation_id' => Nation::where('name', 'Japan')->first()->id,
+            'hull_number' => 111,
+            'built_year' => 1941,
+        ]);
+
         
     }
 }
