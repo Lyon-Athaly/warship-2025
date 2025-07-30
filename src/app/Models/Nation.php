@@ -13,4 +13,8 @@ class Nation extends Model
     {
         return $this->hasMany(Ship::class);
     }
+    public function docks(): HasMany
+    {
+        return $this->hasMany(Dock::class);
+    }
 }

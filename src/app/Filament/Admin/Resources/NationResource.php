@@ -12,13 +12,14 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
 class NationResource extends Resource
 {
     protected static ?string $model = Nation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup = 'Master Data';
     public static function form(Form $form): Form
     {
         return $form
@@ -38,8 +39,11 @@ class NationResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('flag_url')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('flag_url')
+                    ->label('Flag')
+                    ->circular()
+                    ->height(40)
+                    ->width(60),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
