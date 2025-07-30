@@ -21,23 +21,72 @@ class ShipSeeder extends Seeder
             'type_id' => Type::where('name', 'Carrier')->first()->id,
             'dock_id' => Dock::where('name', 'Pearl Harbor')->first()->id,
             'nation_id' => Nation::where('name', 'United States')->first()->id,
-            'built_year' => 1961,
+            'hull_number' => 6,
+            'built_year' => 1938,
         ]);
 
         Ship::create([
-            'name' => 'HMS Queen Elizabeth',
-            'type_id' => Type::where('name', 'Carrier')->first()->id,
+            'name' => 'HMS Hood',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
             'dock_id' => Dock::where('name', 'Portsmouth')->first()->id,
             'nation_id' => Nation::where('name', 'United Kingdom')->first()->id,
-            'built_year' => 2017,
+            'hull_number' => 51,
+            'built_year' => 1920,
         ]);
 
         Ship::create([
-            'name' => 'JS Kongo',
+            'name' => 'IJN shimakaze',
             'type_id' => Type::where('name', 'Destroyer')->first()->id,
             'dock_id' => Dock::where('name', 'Yokosuka Naval Base')->first()->id,
             'nation_id' => Nation::where('name', 'Japan')->first()->id,
-            'built_year' => 1993,
+            'hull_number' => 125,
+            'built_year' => 1943,
         ]);
+
+        Ship::create([
+            'name' => 'KMS Bismarck',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
+            'dock_id' => Dock::where('name', 'Kiel Naval Base')->first()->id,
+            'nation_id' => Nation::where('name', 'Germany')->first()->id,
+            'hull_number' => 509,
+            'built_year' => 1940,
+        ]);
+        Ship::create([
+            'name' => 'HMS Belfast',
+            'type_id' => Type::where('name', 'Cruiser')->first()->id,
+            'dock_id' => Dock::where('name', 'London Dockyard')->first()->id,
+            'nation_id' => Nation::where('name', 'United Kingdom')->first()->id,
+            'hull_number' => 35,
+            'built_year' => 1939,
+        ]);
+        
+        Ship::create([
+            'name' => 'USS Missouri',
+            'type_id' => Type::where('name', 'Battleship')->first()->id,
+            'dock_id' => Dock::where('name', 'Pearl Harbor')->first()->id,
+            'nation_id' => Nation::where('name', 'United States')->first()->id,
+            'hull_number' => 63,
+            'built_year' => 1944,
+        ]);
+
+        Ship::create([
+            'name' => 'KMS Prinz Eugen',
+            'type_id' => Type::where('name', 'Cruiser')->first()->id,
+            'dock_id' => Dock::where('name', 'Kiel Naval Base')->first()->id,
+            'nation_id' => Nation::where('name', 'Germany')->first()->id,
+            'hull_number' => 507,
+            'built_year' => 1940,
+        ]);
+
+        Ship::create([
+            'name' => 'IJN I-401',
+            'type_id' => Type::where('name', 'Submarine')->first()->id,
+            'dock_id' => Dock::where('name', 'Yokosuka Naval Base')->first()->id,
+            'nation_id' => Nation::where('name', 'Japan')->first()->id,
+            'hull_number' => 401,
+            'built_year' => 1944,
+        ]);
+
+        
     }
 }

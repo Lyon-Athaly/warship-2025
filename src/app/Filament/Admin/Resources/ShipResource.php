@@ -35,6 +35,9 @@ class ShipResource extends Resource
                 Forms\Components\Select::make('nation_id')
                     ->relationship('nation', 'name')
                     ->required(),
+                Forms\Components\Select::make('hull_number')
+                    ->label('Hull Number')
+                    ->required(),
                 Forms\Components\TextInput::make('built_year'),
             ]);
     }
@@ -53,6 +56,11 @@ class ShipResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('nation.name')
                     ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('hull_number')
+                    ->label('Hull Number')
+                    ->numeric()
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('built_year'),
                 Tables\Columns\TextColumn::make('created_at')

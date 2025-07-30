@@ -18,6 +18,9 @@ class TypeSeeder extends Seeder
             ['name' => 'Cruiser', 'description' => 'Heavily armed warship.'],
             ['name' => 'Battleship', 'description' => 'Large armored warship with a main battery of large caliber guns.'],
             ['name' => 'Carrier', 'description' => 'Ship that serves as a seagoing airbase.'],
+            ['name' => 'Submarine', 'description' => 'Watercraft capable of independent operation underwater.'],
+            ['name' => 'Frigate', 'description' => 'Warship designed for escorting other ships in a fleet.'],
+            ['name' => 'Corvette', 'description' => 'Small, maneuverable, lightly armed warship.'],
         ]);
     }
 }

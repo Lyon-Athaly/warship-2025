@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignIdFor(Type::class);
             $table->foreignIdFor(Dock::class);
             $table->foreignIdFor(Nation::class);
+            $table->integer('hull_number');
             $table->year('built_year')->nullable();
             $table->timestamps();
         });
